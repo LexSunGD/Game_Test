@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+/* El contenedor simula la pantalla de un teléfono vertical */
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    max-width: 450px; /* Límite para pantallas de PC */
+    max-height: 800px;
+    position: relative;
+    background-color: #222;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos exclusivos del Menú Principal */
+#main-menu {
+    width: 100%;
+    height: 100%;
+    /* Ruta apuntando a tu carpeta de recursos */
+    background-image: url('resources/background.png'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.game-title {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    letter-spacing: 2px;
+}
+
+/* Estilos del Botón "Create" utilizando tu imagen */
+#btn-create {
+    width: 220px;
+    height: 80px;
+    background-image: url('resources/btn_create_normal.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.1s ease;
+}
+
+#btn-create:active {
+    transform: scale(0.95); /* Se encoge un poco al pulsarlo en el móvil */
+    /* Si haces la imagen del botón presionado, descomenta la línea de abajo: */
+    /* background-image: url('resources/btn_create_pressed.png'); */
+}
+
+/* Estilos del Canvas del Juego */
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
